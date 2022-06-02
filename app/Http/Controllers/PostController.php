@@ -14,7 +14,7 @@ class PostController extends Controller
     }
     public function index(){
 
-        $posts = Post::orderBy('created_at', 'desc')->with(['user','likes'])->paginate(3);//or Post::latest()->paginate(3). to get all the posts
+        $posts = Post::orderBy('created_at', 'desc')->with(['user','likes'])->paginate(10);//or Post::latest()->paginate(3). to get all the posts
 
         return view('posts.index', [
             'posts'=>$posts

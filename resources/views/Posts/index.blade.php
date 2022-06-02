@@ -22,7 +22,6 @@
             </form>
             @endauth
             <hr class="mb-4">
-           
 
             @if ($posts->count())
                 @foreach($posts as $post)
